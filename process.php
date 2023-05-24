@@ -2,8 +2,10 @@
 <?php
 $submittedValue = $_POST['contents'];
 
-if ($submittedValue === '127') {
+if ($submittedValue === '4152') {
     redirectUser();
+} else {
+    redirectToPreviousPage();
 }
 
 function redirectUser() {
@@ -13,4 +15,13 @@ function redirectUser() {
     echo '<script>window.location.href = "' . $destinationURL . '";</script>';
     exit;
 }
+
+function redirectToPreviousPage() {
+    $referer = $_SERVER['HTTP_REFERER']; 
+    if (!empty($referer)) {
+        echo '<script>window.location.href = "' . $referer . '";</script>';
+    } else;
+}
+
+
 ?>

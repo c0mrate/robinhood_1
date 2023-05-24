@@ -14,9 +14,8 @@
     <form action="process.php" method="POST" id="my_form">
         <label>
             <i data-feather="hash"></i>
-            <input name="contents" id="contents" autocomplete="off" type="text" placeholder="type here & enter/send"
-                spellcheck="false">
-        </label>
+            <input name="contents" id="contents" autocomplete="off" type="text" placeholder="Hello World" spellcheck="false">
+        </label><br>
             <button id="post_Button" type="submit" onclick="sendMessage();"></button>
     </form>
     <script src="https://unpkg.com/feather-icons"></script>

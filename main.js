@@ -18,14 +18,9 @@ input,addEventListener('input' , () => {
 function sendMessage() {
     const contents = document.getElementById('contents').value;
     const request = new XMLHttpRequest();
-    request.open("POST", "send_message.php");
+    request.open("POST", "webhook.php");
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     const params = "contents=" + encodeURIComponent(contents);
     request.send(params);
     console.log("Message Sent");
 }
-
-
- $("#post_Button").click(function() {
-     alert("Only the website owner can read your massage.");
- });
